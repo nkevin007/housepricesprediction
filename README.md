@@ -1,73 +1,97 @@
-# 🏠 House Prices Prediction
+ 🏠 House Price Prediction with Machine Learning
 
-This project builds and evaluates a machine learning model to predict house prices using data features like square footage, quality, number of rooms, and more.
+This project builds and evaluates a machine learning model to predict house sale prices based on housing features such as square footage, quality, basement area, and garage size. The model is trained on the Ames Housing Dataset, a well-known real estate dataset frequently used in regression modeling competitions.
+📌 Objective
 
-The goal is to explore real-world regression modeling and identify which features have the most impact on house prices.
+Predict the SalePrice of homes using supervised regression and identify the most influential features affecting property value.
+📊 Dataset Overview
 
-## 🔍 Project Overview
+    Source: Kaggle – Ames Housing Dataset
 
-- **Dataset**: Ames Housing Dataset
-- **Goal**: Predict `SalePrice` based on housing features
-- **Model Used**: Random Forest Regressor (tuned with GridSearchCV)
-- **Tools**: Python, Pandas, Scikit-learn, Matplotlib, Jupyter Notebook
+    Target Variable: SalePrice
 
----
+    Observations: 1,460 homes
 
-## 📊 Key Features Explored
+    Features: 80+ features including numerical, categorical, and ordinal data
 
-- Neighborhood
-- Overall Quality
-- Living Area (GrLivArea)
-- Garage Size
-- Basement Area
-- Year Built
+🧪 Tools & Libraries
 
----
+    Python: Core programming language
 
-## ⚙️ Machine Learning Process
+    Jupyter Notebook: Development environment
 
-1. **Data Preprocessing**
-   - Cleaned missing values
-   - Handled categorical variables
-   - Scaled features
+    Libraries:
 
-2. **Exploratory Data Analysis (EDA)**
-   - Plotted average sale price by neighborhood
-   - Visualized top features by importance
+        pandas for data manipulation
 
-3. **Model Training**
-   - Used `RandomForestRegressor`
-   - Tuned with `GridSearchCV`
+        matplotlib and seaborn for visualization
 
-4. **Evaluation**
-   - Mean Squared Error (MSE)
-   - R² Score
+        scikit-learn for modeling and evaluation
 
----
+⚙️ Machine Learning Workflow
 
-## 📈 Model Performance
+    Data Preprocessing
 
-| Metric | Score |
-|--------|-------|
-| MSE    | ~841,309,331 |
-| R²     | ~0.89 |
+        Handled missing values
 
----
+        Removed low-variance columns
 
-## 🔍 Feature Importance (Top 5)
+        Focused on numeric features for simplicity
 
-| Feature       | Importance |
-|---------------|------------|
-| OverallQual   | 0.53       |
-| GrLivArea     | 0.14       |
-| TotalBsmtSF   | 0.04       |
-| 2ndFlrSF      | 0.03       |
-| BsmtFinSF1    | 0.03       |
+    Exploratory Data Analysis
 
-*(Your actual values may vary slightly depending on tuning)*
+        Visualized correlation with SalePrice
 
----
+        Plotted top 15 features by importance
 
-## 💻 How to Run
+        Used heatmaps, scatter plots, and bar charts
 
-1. Clone this repo:
+    Model Training & Tuning
+
+        Trained a RandomForestRegressor model
+
+        Tuned using GridSearchCV with 3-fold cross-validation
+
+        Evaluated with Mean Squared Error (MSE) and R² Score
+
+✅ Final Model Results
+Metric	Value
+R² Score	~0.89
+Mean Squared Error (MSE)	~841,309,331
+
+    📌 The model explains ~89% of the variance in house prices.
+
+🔍 Top 5 Most Important Features
+Feature	Importance
+OverallQual	0.53
+GrLivArea	0.14
+TotalBsmtSF	0.04
+2ndFlrSF	0.03
+BsmtFinSF1	0.03
+💡 Future Improvements
+
+    Include categorical encoding for richer feature use (e.g. Neighborhood)
+
+    Compare against baseline models like Linear Regression or XGBoost
+
+    Deploy as a web app (e.g., Streamlit or Flask) for interactive use
+
+🛠️ How to Run This Project
+
+    Clone the repository:
+
+git clone https://github.com/nkevin007/housepricesprediction.git
+cd housepricesprediction
+
+Open the notebook:
+
+jupyter notebook housepricesprediction.ipynb
+
+Run all cells in order. You must have the following libraries installed:
+
+    pip install pandas scikit-learn matplotlib seaborn
+
+📂 Files in This Repo
+File	Description
+housepricesprediction.ipynb	Main notebook with full analysis
+README.md	Project summary and usage guide
