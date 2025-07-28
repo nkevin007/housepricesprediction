@@ -2,7 +2,7 @@
 
 This project builds and deploys a machine learning model to **predict house sale prices** using key housing features such as living area, quality rating, and basement size. The model is trained on the **Ames Housing Dataset** and deployed via **Streamlit** with a built-in confidence range to account for prediction uncertainty.
 
----
+----
 
 ## 📌 Objective
 
